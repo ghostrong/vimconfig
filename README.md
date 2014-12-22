@@ -13,3 +13,9 @@ cd vimconfig
 
 sh setup.sh
 ```
+
+
+# TODO
+
+* test it on a new machine, find out the dependent packages
+* avoid "indent" for plain text
