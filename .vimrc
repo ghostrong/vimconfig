@@ -436,3 +436,13 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+" insert header lines in python files
+function InsertPythonHeaderComment()
+    call setline(1, "#!/usr/bin/env python")
+    call append(1, "#coding=utf8")
+    normal G
+    normal o
+endf
+
+autocmd bufnewfile *.py call InsertPythonHeaderComment()
