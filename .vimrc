@@ -13,7 +13,11 @@ set fencs=utf-8,gbk,big5,euc-jp,utf-16le
 set fenc=utf-8 enc=utf-8 tenc=utf-8
 "set foldmethod=syntax
 "Paste toggle - when pasting something in, don't indent.
-set pastetoggle=<F3>
+" set pastetoggle=<F3>
+
+" [paste-mode] keep the original appearance when pasting
+" set paste
+set pastetoggle=<F11>
 
 set noai!
 set autoindent
@@ -170,7 +174,7 @@ map <F10> :NERDTreeToggle <CR>
 imap <F10> <ESC> :NERDTreeToggle <CR>
 
 " F11 toggle paste mode
-set pastetoggle=<F11>
+" set pastetoggle=<F11>
 
 " F12 Grep
 nnoremap <silent> <F12> :Grep<CR>
