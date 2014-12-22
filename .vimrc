@@ -449,4 +449,4 @@ function InsertPythonHeaderComment()
     normal o
 endf
 
-autocmd bufnewfile *.py call InsertPythonHeaderComment()
+" autocmd bufnewfile *.py call InsertPythonHeaderComment()
