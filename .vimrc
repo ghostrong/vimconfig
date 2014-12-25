@@ -450,3 +450,5 @@ function InsertPythonHeaderComment()
 endf
 
 " autocmd bufnewfile *.py call InsertPythonHeaderComment()
+
+set nomodeline
