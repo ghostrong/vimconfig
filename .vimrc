@@ -332,6 +332,7 @@ syn match Error '\s\+$'
 set listchars=tab:>-,trail:-
 "set listchars=trail:-
 set list
+"set nolist
 
 function! Blade(...)
     let l:old_makeprg = &makeprg
@@ -345,6 +346,7 @@ command! -nargs=* Blade call Blade('<args>')
 " taglist
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
+
 
 " winmanager
 "let g:NERDTree_title='NERD Tree'
@@ -410,7 +412,9 @@ inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
-inoremap <expr><CR>  (pumvisible() ? "\<C-y>":'') . "\<C-f>\<CR>X\<BS>"
+" Following is the bug causing '^F' at the tail of each line
+" inoremap <expr><CR>  (pumvisible() ? "\<C-y>":'') . "\<C-f>\<CR>X\<BS>"
+inoremap <expr><CR>  (pumvisible() ? "\<C-y>":'') . "\<CR>"
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
